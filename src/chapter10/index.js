@@ -83,7 +83,11 @@ new Promise((resolve, reject) => {
         reject("Timeout is over but I am upset. You should not have invoked a timeout in the first place. Hence I am sending a <em>reject</em> instead of a <em>resolve</em>!"); //send out a reject feedback
         }, 1000)
     }).then((data) => {
+<<<<<<< Updated upstream
         log(`${data}`);//This should output "Timeout is over"
+=======
+        log(`${data}`);//This should output "Timeout is over" if resolve("Timeout is over") is called
+>>>>>>> Stashed changes
     }).catch((error) => {//This will only be reached it the asynchronous function returned a reject statement.
         log(`Error message received: ${error}`);
     })
@@ -95,7 +99,11 @@ log(`The username of ${user1.firstName} is ${user1.username}`)
 
 //new Promise as an expression
 /*
+<<<<<<< Updated upstream
 let myPromise = new Promise((resolve, reject) => {
+=======
+const myPromise = new Promise((resolve, reject) => {
+>>>>>>> Stashed changes
     setTimeout(()=>{
         resolve("Timeout is over"); //send out a success feedback with data using resolve
         }, 1000) //set timeout for 1000ms i.e. 1second.
@@ -128,7 +136,11 @@ new Promise((resolve, reject) => {
 
 //Calling Promise aware functions already defined by others
 /*
+<<<<<<< Updated upstream
 let url = 'https://jsonplaceholder.typicode.com/users/1'; //Get data for a user with id 1
+=======
+const url = 'https://jsonplaceholder.typicode.com/users/1'; //Get data for a user with id 1
+>>>>>>> Stashed changes
 fetch(url)
     .then(response => response.json()) //convert data returned to json
     .then(data => log(`Data: Id = ${data.id}, Name = ${data.name}, Email = ${data.email}`)) //use the json data
@@ -138,9 +150,15 @@ fetch(url)
 
 //Using Promise.all
 /*
+<<<<<<< Updated upstream
 let fetch1 = fetch('https://jsonplaceholder.typicode.com/users/1').then(response => response.json())
 let fetch2 = fetch('https://jsonplaceholder.typicode.com/users/2').then(response => response.json())
 let fetch3 = fetch('https://jsonplaceholder.typicode.com/users/3').then(response => response.json())
+=======
+const fetch1 = fetch('https://jsonplaceholder.typicode.com/users/1').then(response => response.json())
+const fetch2 = fetch('https://jsonplaceholder.typicode.com/users/2').then(response => response.json())
+const fetch3 = fetch('https://jsonplaceholder.typicode.com/users/3').then(response => response.json())
+>>>>>>> Stashed changes
 
 Promise.all([fetch1,fetch2,fetch3])//get the data for the three calls in an array.
 .then((data)=>{
@@ -175,7 +193,11 @@ usePromiseAwareTimeout(3000);
 
 //Async/await example 2
 /*
+<<<<<<< Updated upstream
 let usersUrl = 'https://jsonplaceholder.typicode.com/users/';
+=======
+const usersUrl = 'https://jsonplaceholder.typicode.com/users/';
+>>>>>>> Stashed changes
 const getUserById = async (userId) => { //user id parameter is expected
     let url = usersUrl + userId; //get the specific url for the user to fetch
     const response = await fetch(url); //make a call to the asynchronous fetch()
@@ -188,7 +210,11 @@ getUserById(2);
 
 //Async/await example 3 - Return a promise
 /*
+<<<<<<< Updated upstream
 let usersUrl = 'https://jsonplaceholder.typicode.com/users/';
+=======
+const usersUrl = 'https://jsonplaceholder.typicode.com/users/';
+>>>>>>> Stashed changes
 const getUserById = async (userId) => {
     let url = usersUrl + userId;
     const response = await fetch(url);
@@ -202,7 +228,11 @@ getUserById(2).then(data => {
 
 //Async/await example 4 - include try/catch
 /*
+<<<<<<< Updated upstream
 let usersUrl = 'https://jsonplaceholder.typicode.com/users/';
+=======
+const usersUrl = 'https://jsonplaceholder.typicode.com/users/';
+>>>>>>> Stashed changes
 const getUserById = async (userId) => {
     let url = usersUrl + userId;
     try{
@@ -231,7 +261,11 @@ getUserById(2);
 
 //Async/await with Promise.all
 /*
+<<<<<<< Updated upstream
 let usersUrl = 'https://jsonplaceholder.typicode.com/users/';
+=======
+const usersUrl = 'https://jsonplaceholder.typicode.com/users/';
+>>>>>>> Stashed changes
 const getUserById = async (userId) => {
     let url = usersUrl + userId;
     try{
@@ -275,7 +309,11 @@ function* waitList(list){
 let myWaitList = waitList(['Peter','Mary','John']); //call waitList
 
 //Prepare the output.
+<<<<<<< Updated upstream
 let output = `The first yielded value is: ${myWaitList.next().value} <br/>
+=======
+const output = `The first yielded value is: ${myWaitList.next().value} <br/>
+>>>>>>> Stashed changes
     Here is what is returned in the next call: ${myWaitList.next().value} <br/>
     Hopefully we still have room for a next call. Here is the return: ${myWaitList.next().value} <br/>
     What if we call again when there is no more value to yield. Here is what we get: ${myWaitList.next().value}`
@@ -296,10 +334,17 @@ function* waitList(list){
     //return; terminates a generator at any point. It does not have to be used at all. It can be used between yield statements if the developer wants the rest of the yield to be ignored.
 }
 
+<<<<<<< Updated upstream
 let myWaitList = waitList(['Peter','Mary','John']); //call waitList
 
 //Prepare the output.
 let output = `The first yielded value is: ${myWaitList.next().value} <br/>
+=======
+const myWaitList = waitList(['Peter','Mary','John']); //call waitList
+
+//Prepare the output.
+const output = `The first yielded value is: ${myWaitList.next().value} <br/>
+>>>>>>> Stashed changes
     Here is what is returned in the next call: ${myWaitList.next().value} <br/>
     Hopefully we still have room for a next call. Here is the return: ${myWaitList.next().value} <br/>
     What if we call again when there is no more value to yield. Here is what we get: ${myWaitList.next().value}`

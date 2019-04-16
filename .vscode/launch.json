@@ -5,6 +5,72 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Basic Koa Program using nodemon",
+            "runtimeExecutable": "nodemon",
+            "program": "${workspaceFolder}/dist/chapter12/basics/koa/index.js",
+            "restart": true,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            /*"env": {
+                "TYPEORM_CONNECTION":"postgres",
+                "TYPEORM_HOST": "localhost",
+                "TYPEORM_USERNAME": "postgres",
+                "TYPEORM_PASSWORD" : "bookexampledbpassword",
+                "TYPEORM_DATABASE" : "bookexample",
+                "TYPEORM_PORT" : "5432",
+                "TYPEORM_SYNCHRONIZE" : "false",
+                "TYPEORM_LOGGING" : "false",
+                */
+                //"TYPEORM_ENTITIES" : "${workspaceFolder}/dist/chapter12/**/*.entity.js,${workspaceFolder}/dist/chapter12/**/*.repository.js"
+                //"TYPEORM_ENTITIES" : "/Users/piusonobhayedo/Library/Mobile Documents/com~apple~CloudDocs/book-examples/Book--Foundations-and-React-Driven-Advances-in-Web-Applications-Development/dist/chapter12/basics/koa/data/**/*.entity.js, /Users/piusonobhayedo/Library/Mobile Documents/com~apple~CloudDocs/book-examples/Book--Foundations-and-React-Driven-Advances-in-Web-Applications-Development/dist/chapter12/basics/koa/data/**/*.repository.js"
+            //}
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Basic Express Program using nodemon",
+            "runtimeExecutable": "nodemon",
+            "program": "${workspaceFolder}/dist/chapter12/basics/express/index.js",
+            "restart": true,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Basic Koa Program",
+            "program": "${workspaceFolder}/dist/chapter12/basics/koa/index.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Basic Express Program",
+            "program": "${workspaceFolder}/dist/chapter12/basics/express/index.js"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome for chapter11",
+            "url": "http://localhost:5500/dist/chapter11/index.html",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome for chapter11",
+            "url": "http://localhost:5500/dist/chapter11/index.html",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome for chapter11",
+            "url": "http://localhost:5500/dist/chapter11/index.html",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome for chapter10",
