@@ -1,0 +1,24 @@
+{
+  "name" : "default",
+  "type" : "postgres",
+  "host" : "localhost",
+  "port" : "5432",
+  "username" : "postgres",
+  "password" : "bookexampledbpassword",
+  "database" : "bookexample",
+  "entities" : [
+    "dist/chapter12/basics/koa/data/**/*.entity.js",
+    "dist/chapter12/basics/koa/data/**/*.repository.js"
+  ],
+  "migrations" : [
+    "dist/chapter12/basics/koa/data/migration/**/*.js"
+  ],
+  "subscribers": [
+    "dist/chapter12/basics/koa/data/subscriber/**/*.js"
+  ],
+  "cli" : {
+    "entitiesDir": "dist/chapter12/basics/koa/data/model",
+    "migrationsDir": "dist/chapter12/basics/koa/data/migration",
+    "subscribersDir": "dist/chapter12/basics/koa/data/subscriber"
+  }
+}

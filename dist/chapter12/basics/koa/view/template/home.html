@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block body %}
+<body>
+  {%include "navigation.html"%}
+  {%include "home-fragments/home-carousel.html"%}
+  <!--Below nav, start sections. See https://bulma.io/documentation/layout/section/.
+  We will make this first section a hero i.e. big bold. See https://bulma.io/documentation/layout/hero/-->
+  <section class="hero is-link is-medium">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Hello {{ username }}
+        </h1>
+        <h2 class="subtitle">
+          Welcome to <strong>SIMS</strong>!
+        </h2>
+      </div>
+    </div>
+  </section>
+  {%include "footer.html" %}
+  <script>
+		bulmaCarousel.attach('.hero-carousel', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      pagination: false,
+      effect: 'fade',
+      loop: true
+    });
+    bulmaCarousel.attach('#homeCarousel', {
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    infinite: true
+  });
+	</script>
+</body>
+{% endblock body %}
+

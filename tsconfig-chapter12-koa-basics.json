@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+      "allowSyntheticDefaultImports": true,
+      "noFallthroughCasesInSwitch": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "esModuleInterop": true,
+      "noUnusedLocals": true,
+      "noImplicitAny": true,
+      "declarationDir": "dist/chapter12/basics/koa/types",
+      "declaration": true,
+      "target": "es2017",
+      "module": "commonJS",
+      "strict": true,
+      "outDir": "dist/chapter12/basics/koa",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "strictPropertyInitialization": false
+    },
+    "include": [
+      "src/chapter12/basics/koa/**/*"
+    ],
+    "exclude": [
+      "node_modules",
+      "dist"
+    ]
+  }

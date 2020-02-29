@@ -36,14 +36,14 @@ log(genericFunction(2,3,4,6,8,9,10.5,12));//Should output The (x,y) values are a
 
 //class declaration example 1
 /*
-let person1 = new Person("Pius", "Onobhayedo", "Male",1.7);
-let person2 = new Person("Mary", "Joseph", "Female", undefined);
+const person1 = new Person("Pius", "Onobhayedo", "Male",1.7);
+const person2 = new Person("Mary", "Joseph", "Female", undefined);
 log(`Person 1 is ${person1.firstName} whose height is ${person1.height}. Person 2 is ${person2.firstName} whose height is ${person2.height}`);
 */
 
 //Accessing object properties
-let person1 = new Person("Pius", "Onobhayedo", "Male",1.7);
-let person2 = new Person("Mary", "Joseph", "Female", undefined);
+const person1 = new Person("Pius", "Onobhayedo", "Male",1.7);
+const person2 = new Person("Mary", "Joseph", "Female", undefined);
 person1.firstName = "peter"; //here we have deliberately used lowercase for first letter
 person2.firstName = "maria"; //here we have deliberately used lowercase for first letter
 log(`Person 1 is ${person1.getFirstName()} whose height is ${person1.height}. Person 2 is ${person2.getFirstName()} whose height is ${person2.height}`); //using getFirstName() to get firstName.
@@ -53,7 +53,7 @@ log(CustomMath.sqrt(100));
 
 //Inheritance
 /*
-let user1 = new User("myusername","mypassword","Pius","Onobhayedo","Male",undefined);
+const user1 = new User("myusername","mypassword","Pius","Onobhayedo","Male",undefined);
 log(`The username of ${user1.firstName} is ${user1.username}`)
 */
 
@@ -70,7 +70,7 @@ new Promise((resolve, reject) => {
     });
 
 //Let us still maintain the last log statement so that we can illustrate better how the asynchronous call that returns after the timeout does not stop the main execution thread.
-let user1 = new User("myusername","mypassword","Pius","Onobhayedo","Male",undefined);
+const user1 = new User("myusername","mypassword","Pius","Onobhayedo","Male",undefined);
 log(`The username of ${user1.firstName} is ${user1.username}`)
 //Expected final display in browser: 'Timeout is over'
 */
@@ -83,27 +83,19 @@ new Promise((resolve, reject) => {
         reject("Timeout is over but I am upset. You should not have invoked a timeout in the first place. Hence I am sending a <em>reject</em> instead of a <em>resolve</em>!"); //send out a reject feedback
         }, 1000)
     }).then((data) => {
-<<<<<<< Updated upstream
         log(`${data}`);//This should output "Timeout is over"
-=======
-        log(`${data}`);//This should output "Timeout is over" if resolve("Timeout is over") is called
->>>>>>> Stashed changes
     }).catch((error) => {//This will only be reached it the asynchronous function returned a reject statement.
         log(`Error message received: ${error}`);
     })
 //Let us still maintain the last log statement so that we can illustrate better how the asynchronous call that returns after the timeout does not stop the main execution thread.
-let user1 = new User("myusername","mypassword","Pius","Onobhayedo","Male",undefined);
+const user1 = new User("myusername","mypassword","Pius","Onobhayedo","Male",undefined);
 log(`The username of ${user1.firstName} is ${user1.username}`)
 //Expected final display in browser 'Error message received: Timeout is over but I am upset. You should not have invoked a timeout in the first place. Hence I am sending a reject instead of a resolve!
 */
 
 //new Promise as an expression
 /*
-<<<<<<< Updated upstream
-let myPromise = new Promise((resolve, reject) => {
-=======
 const myPromise = new Promise((resolve, reject) => {
->>>>>>> Stashed changes
     setTimeout(()=>{
         resolve("Timeout is over"); //send out a success feedback with data using resolve
         }, 1000) //set timeout for 1000ms i.e. 1second.
@@ -136,11 +128,7 @@ new Promise((resolve, reject) => {
 
 //Calling Promise aware functions already defined by others
 /*
-<<<<<<< Updated upstream
-let url = 'https://jsonplaceholder.typicode.com/users/1'; //Get data for a user with id 1
-=======
 const url = 'https://jsonplaceholder.typicode.com/users/1'; //Get data for a user with id 1
->>>>>>> Stashed changes
 fetch(url)
     .then(response => response.json()) //convert data returned to json
     .then(data => log(`Data: Id = ${data.id}, Name = ${data.name}, Email = ${data.email}`)) //use the json data
@@ -150,15 +138,9 @@ fetch(url)
 
 //Using Promise.all
 /*
-<<<<<<< Updated upstream
-let fetch1 = fetch('https://jsonplaceholder.typicode.com/users/1').then(response => response.json())
-let fetch2 = fetch('https://jsonplaceholder.typicode.com/users/2').then(response => response.json())
-let fetch3 = fetch('https://jsonplaceholder.typicode.com/users/3').then(response => response.json())
-=======
 const fetch1 = fetch('https://jsonplaceholder.typicode.com/users/1').then(response => response.json())
 const fetch2 = fetch('https://jsonplaceholder.typicode.com/users/2').then(response => response.json())
 const fetch3 = fetch('https://jsonplaceholder.typicode.com/users/3').then(response => response.json())
->>>>>>> Stashed changes
 
 Promise.all([fetch1,fetch2,fetch3])//get the data for the three calls in an array.
 .then((data)=>{
@@ -193,11 +175,7 @@ usePromiseAwareTimeout(3000);
 
 //Async/await example 2
 /*
-<<<<<<< Updated upstream
-let usersUrl = 'https://jsonplaceholder.typicode.com/users/';
-=======
 const usersUrl = 'https://jsonplaceholder.typicode.com/users/';
->>>>>>> Stashed changes
 const getUserById = async (userId) => { //user id parameter is expected
     let url = usersUrl + userId; //get the specific url for the user to fetch
     const response = await fetch(url); //make a call to the asynchronous fetch()
@@ -210,11 +188,7 @@ getUserById(2);
 
 //Async/await example 3 - Return a promise
 /*
-<<<<<<< Updated upstream
-let usersUrl = 'https://jsonplaceholder.typicode.com/users/';
-=======
 const usersUrl = 'https://jsonplaceholder.typicode.com/users/';
->>>>>>> Stashed changes
 const getUserById = async (userId) => {
     let url = usersUrl + userId;
     const response = await fetch(url);
@@ -228,13 +202,9 @@ getUserById(2).then(data => {
 
 //Async/await example 4 - include try/catch
 /*
-<<<<<<< Updated upstream
-let usersUrl = 'https://jsonplaceholder.typicode.com/users/';
-=======
 const usersUrl = 'https://jsonplaceholder.typicode.com/users/';
->>>>>>> Stashed changes
 const getUserById = async (userId) => {
-    let url = usersUrl + userId;
+    const url = usersUrl + userId;
     try{
         const response = await fetch(url);
         const data = await response.json();
@@ -261,11 +231,7 @@ getUserById(2);
 
 //Async/await with Promise.all
 /*
-<<<<<<< Updated upstream
-let usersUrl = 'https://jsonplaceholder.typicode.com/users/';
-=======
 const usersUrl = 'https://jsonplaceholder.typicode.com/users/';
->>>>>>> Stashed changes
 const getUserById = async (userId) => {
     let url = usersUrl + userId;
     try{
@@ -306,14 +272,10 @@ function* waitList(list){
     //return; terminates a generator at any point. It does not have to be used at all. It can be used between yield statements if the developer wants the rest of the yield to be ignored.
 }
 
-let myWaitList = waitList(['Peter','Mary','John']); //call waitList
+const myWaitList = waitList(['Peter','Mary','John']); //call waitList
 
 //Prepare the output.
-<<<<<<< Updated upstream
-let output = `The first yielded value is: ${myWaitList.next().value} <br/>
-=======
 const output = `The first yielded value is: ${myWaitList.next().value} <br/>
->>>>>>> Stashed changes
     Here is what is returned in the next call: ${myWaitList.next().value} <br/>
     Hopefully we still have room for a next call. Here is the return: ${myWaitList.next().value} <br/>
     What if we call again when there is no more value to yield. Here is what we get: ${myWaitList.next().value}`
@@ -334,17 +296,10 @@ function* waitList(list){
     //return; terminates a generator at any point. It does not have to be used at all. It can be used between yield statements if the developer wants the rest of the yield to be ignored.
 }
 
-<<<<<<< Updated upstream
-let myWaitList = waitList(['Peter','Mary','John']); //call waitList
-
-//Prepare the output.
-let output = `The first yielded value is: ${myWaitList.next().value} <br/>
-=======
 const myWaitList = waitList(['Peter','Mary','John']); //call waitList
 
 //Prepare the output.
 const output = `The first yielded value is: ${myWaitList.next().value} <br/>
->>>>>>> Stashed changes
     Here is what is returned in the next call: ${myWaitList.next().value} <br/>
     Hopefully we still have room for a next call. Here is the return: ${myWaitList.next().value} <br/>
     What if we call again when there is no more value to yield. Here is what we get: ${myWaitList.next().value}`

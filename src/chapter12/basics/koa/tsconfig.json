@@ -1,0 +1,11 @@
+//This tsconfig is not what I am using for the tsc build specified in package.json. This is just to keep away the red underline from decorated functions at dev time
+{
+   "compilerOptions": {
+     "emitDecoratorMetadata": true,
+     "experimentalDecorators": true,
+     "module": "commonjs",
+     "esModuleInterop": true
+     
+   }
+ }
+ 

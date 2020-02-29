@@ -1,0 +1,16 @@
+@charset "utf-8";
+//$grey: hsl(0, 0%, 48%);
+//$grey-dark: hsl(0, 0%, 29%);
+//$footer-background-color: $grey;
+
+
+
+@import "/Users/piusonobhayedo/Library/Mobile Documents/com~apple~CloudDocs/book-examples/Book--Foundations-and-React-Driven-Advances-in-Web-Applications-Development/node_modules/bulma/bulma.sass";
+@import "/Users/piusonobhayedo/Library/Mobile Documents/com~apple~CloudDocs/book-examples/Book--Foundations-and-React-Driven-Advances-in-Web-Applications-Development/node_modules/bulma-extensions/bulma-carousel/src/sass/index.sass";
+
+//Below added by Pius to enable clickable right icons in control which I am using for show password.
+//Bulma sets icon pointer-events to none by default.
+//To override, inspect in chrome to know how bulma sets it.
+.control.has-icons-right .icon {
+    pointer-events: initial;
+}

@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+      "allowSyntheticDefaultImports": true,
+      "noFallthroughCasesInSwitch": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "esModuleInterop": true,
+      "noUnusedLocals": true,
+      "noImplicitAny": true,
+      "declarationDir": "dist/chapter12/basics/express/types",
+      "declaration": true,
+      "target": "es2017",
+      "module": "commonJS",
+      "strict": true,
+      "outDir": "dist/chapter12/basics/express",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "sourceMap": true,
+      "lib": [
+        "es5",
+        "es6"
+     ]
+    },
+    "include": [
+      "src/chapter12/basics/express/**/*"
+    ],
+    "exclude": [
+      "node_modules",
+      "dist"
+    ]
+  }
