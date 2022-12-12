@@ -59,7 +59,7 @@
     "body-parser": "^1.19.0",
     "bulma-extensions": "^6.2.7",
     "class-validator": "^0.9.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "formidable": "^1.2.1",
     "koa": "^2.8.1",
     "koa-body": "^4.1.0",
